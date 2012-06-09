@@ -1,0 +1,41 @@
+#   Sample game for txtscroll
+# =============================
+
+#-----{ Comments }------------------------------------------------------------
+# Comments are ignored by the game interpreter.  The syntax for a comment is:
+#   # Comment Text
+# This is similar to many programming lanaguages, which explains this syntax.
+# The leading space is not required, but it looks better with one.  Notice how
+# it looks without a leading space:
+#   #hello, this is a comment without a leading space.
+# The # looks like part of the word, which is confusing.  Whitespace is good.
+
+#-----{ Headers }-------------------------------------------------------------
+# The next line is a centered header.  All centered headers are bold.  The
+# syntax for a centered header is:
+#   |=Centered Header Text=|
+# They are automaticalaly aligned and styled, all you have to do is type that
+# tiny bit of extra text around them.
+|=Welcome to the sample game!=|
+
+#-----{ Choices }-------------------------------------------------------------
+# Choices are made with the following syntax:
+#   @file.txts:Choice Text
+# In the game this will be shown as the following:
+#   1. Choice Text
+# They are automatically numbered based on their order and number in the file.
+@start.txts:Start Game
+@help.txts:Help
+
+#-----{ Special Choices }-----------------------------------------------------
+# There are some so-called "Special Choices".  The syntax for them is the same
+# as the syntax for a normal choice, except the file always begins and ends
+# with $ characters.  This calls for an example:
+#   @$specialchoice$:Special Choice Text
+# This will be rendered in the game like this:
+#   1. Special Choice Text
+# There is only one special choice as of now.  It is:
+#   $quit$
+# This quits the game if the user makes the appropriate choice.  THIS IS NOT
+# FOR A SCREEN TO SAY THE USER LOST.  To do this, just use another .txts file.
+@$quit$:Quit
